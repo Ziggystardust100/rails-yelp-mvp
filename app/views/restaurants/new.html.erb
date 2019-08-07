@@ -1,0 +1,24 @@
+
+<div class="container">
+<h1>Create a restaurant</h1>
+<%= form_for @restaurant do |f| %>
+<div class = 'form-group'>
+  <%= f.label :name, "Enter a name" %>
+<div class="field"><%= f.text_field :name, class: "form-control" %></div>
+  <br>
+<%= f.label :address, "Enter an address" %>
+  <div class="field"> <%= f.text_field :address, class: "form-control"  %></div>
+
+<br>
+<%= f.label :category, "Enter a category" %>
+<div class="field"><%= f.select :category, options_for_select(["chinese", "italian", "japanese", "french", "belgian"]), class: "genForm_dropBox", class: "form-control"  %></div>
+<br>
+<%= f.label :phone_number, "Enter a phone number" %>
+<div class="field"><%= f.text_field :phone_number, class: "form-control"  %></div>
+<br>
+<%= f.submit class: "btn btn-primary" %>
+</div>
+<% end %>
+</div>
+
+
